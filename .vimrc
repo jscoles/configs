@@ -9,3 +9,6 @@
 :set softtabstop=2
 
 :behave mswin
+
+:set ai
+:set nu
