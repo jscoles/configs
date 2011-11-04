@@ -5,10 +5,11 @@
 :set ignorecase
 :set smartcase 
 
-:set tabstop=2
+:set tabstop=4
+:set expandtab
+:set shiftwidth=2
 :set softtabstop=2
 
-:behave mswin
-
-:set ai
+:set autoindent
+:set smartindent
 :set nu
