@@ -1,0 +1,27 @@
+# Basic Settings {{{
+
+#escape ^Jj                         # Switch C-a to C-j
+deflogin on                        # All screens are considered logins (COMMENT OUT FOR LOCALHOST ON MAC)
+autodetach on                      # Detach on HUP instead of kill
+startup_message off                # Don't be annoying
+vbell off                          # Don't be annoying
+defshell $SHELL                    # The dash makes it a login shell (-$SHELL)
+defscrollback 10000                # Remember a lot
+nonblock on                        # Block input from hung applications
+defutf8 on                         # Always use utf8
+defflow off                        # Turn off flow-control
+msgwait 3                          # Display msgs for N seconds
+altscreen on                       # Enable alternate screen support
+attrcolor b ".I"                   # Allow bold colors
+defbce on                          # Erase background with current background color
+term screen-256color-bce           # Set $TERM
+termcapinfo xterm* ti@:te@         # Allow scrolling
+
+# }}}
+
+# Hardstatus {{{
+
+hardstatus alwayslastline '%{= kG}%{C}Screen: %{c}%{= kG}[%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{C} %d-%m %{W}%c %{g}]'
+
+# }}}
+
