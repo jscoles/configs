@@ -1,5 +1,6 @@
 call pathogen#infect()
 set nocompatible
+set noswapfile
 syntax on
 set incsearch
 set ignorecase
@@ -38,6 +39,7 @@ colorscheme solarized
 
 let g:CommandTMaxHeight=25
 let g:CommandTMatchWindowReverse=1
+let g:CommandTMaxFiles = 50000
 
 " fugitive.vim shortcuts
 nnoremap g* :Ggrep <cword><cr><cr>:copen<cr>
@@ -55,3 +57,8 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+
+
+set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+set laststatus=2
+
