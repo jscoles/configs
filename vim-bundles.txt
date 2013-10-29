@@ -5,3 +5,4 @@ git://github.com/altercation/vim-colors-solarized.git
 git://git.wincent.com/command-t.git
 git://github.com/lukaszb/vim-web-indent
 git://github.com/vim-scripts/mru.vim
+https://github.com/vim-scripts/AutoComplPop.git

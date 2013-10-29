@@ -43,6 +43,13 @@ let g:CommandTMaxFiles = 50000
 
 " fugitive.vim shortcuts
 nnoremap g* :Ggrep <cword><cr><cr>:copen<cr>
+nnoremap gr :Ggrep  
+
+" MRU.vim shortcuts
+nnoremap <Leader>m :MRU<cr>
+
+" Other shortcuts
+nnoremap td :tabe %<cr>
 
 " shell shortcuts
 
@@ -62,3 +69,4 @@ vnoremap <silent> # :<C-U>
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set laststatus=2
 
+let MRU_EXCLUDE_FILES = '^git-.*)'
