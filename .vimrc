@@ -23,6 +23,10 @@ set smartindent
 set nu
 
 "nnoremap <silent> <CR> nohlsearch<CR>
+"remap increment number for screen/tmux friendlyness
+nnoremap <C-c> <C-a>
+
+nnoremap <C-w>w :%s/\s$//g<CR>
 
 set exrc " enable per-directory .vimrc files
 set secure " disable unsafe commands in local .vimrc files
@@ -43,7 +47,7 @@ let g:CommandTMaxFiles = 50000
 
 " fugitive.vim shortcuts
 nnoremap g* :Ggrep <cword><cr><cr>:copen<cr>
-nnoremap gr :Ggrep  
+nnoremap gr :Ggrep
 
 " MRU.vim shortcuts
 nnoremap <Leader>m :MRU<cr>
