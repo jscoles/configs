@@ -1,4 +1,5 @@
 call pathogen#infect()
+Helptags
 set nocompatible
 set noswapfile
 syntax on
@@ -74,3 +75,6 @@ set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set laststatus=2
 
 let MRU_EXCLUDE_FILES = '^git-.*)'
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
