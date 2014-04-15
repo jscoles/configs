@@ -27,7 +27,12 @@ set nu
 "remap increment number for screen/tmux friendlyness
 nnoremap <C-c> <C-a>
 
+"shortcut for stripping whitespace from files
 nnoremap <C-w>w :%s/\s$//g<CR>
+
+noremap <silent> <C-S>  :update<CR>
+vnoremap <silent> <C-S> <C-C>:update<CR>
+inoremap <silent> <C-S> <C-O>:update<CR>
 
 set exrc " enable per-directory .vimrc files
 set secure " disable unsafe commands in local .vimrc files
