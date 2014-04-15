@@ -28,7 +28,7 @@ set nu
 nnoremap <C-c> <C-a>
 
 "shortcut for stripping whitespace from files
-nnoremap <C-w>w :%s/\s$//g<CR>
+nnoremap <C-w>w :%s/\s\+$//e<CR>
 
 noremap <silent> <C-S>  :update<CR>
 vnoremap <silent> <C-S> <C-C>:update<CR>
