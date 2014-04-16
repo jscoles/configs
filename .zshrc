@@ -33,3 +33,4 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 export LESS=eFRX
 
+stty -ixon
