@@ -79,6 +79,7 @@ vnoremap <silent> # :<C-U>
 
 
 " set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set laststatus=2
 
 let MRU_EXCLUDE_FILES = '^git-.*)'
@@ -86,6 +87,3 @@ let MRU_EXCLUDE_FILES = '^git-.*)'
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup

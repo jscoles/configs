@@ -8,3 +8,4 @@ git://github.com/vim-scripts/mru.vim
 https://github.com/vim-scripts/AutoComplPop.git
 https://github.com/scrooloose/syntastic.git
 https://github.com/cakebaker/scss-syntax.vim.git
+git://github.com/lokaltog/powerline.git
