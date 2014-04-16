@@ -34,6 +34,8 @@ noremap <silent> <C-S>  :update<CR>
 vnoremap <silent> <C-S> <C-C>:update<CR>
 inoremap <silent> <C-S> <C-O>:update<CR>
 
+set pastetoggle=<C-P>
+
 set exrc " enable per-directory .vimrc files
 set secure " disable unsafe commands in local .vimrc files
 if has("mouse")
