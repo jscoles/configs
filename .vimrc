@@ -49,9 +49,7 @@ let g:solarized_termcolors=256
 let g:solarized_visibility="high"
 colorscheme solarized
 
-let g:CommandTMaxHeight=25
-let g:CommandTMatchWindowReverse=1
-let g:CommandTMaxFiles = 50000
+let g:ctrlp_map = '<Leader>t'
 
 " fugitive.vim shortcuts
 nnoremap g* :Ggrep <cword><cr><cr>:copen<cr>
