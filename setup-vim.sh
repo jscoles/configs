@@ -7,6 +7,7 @@ ln -fs $CONFIG_DIR/dotfiles/.vimrc .vimrc
 cp -r $CONFIG_DIR/dotfiles/.vim .
 
 BUNDLE_DIR="$HOME_DIR/.vim/bundle"
+mkdir -p $BUNDLE_DIR
 
 #clear old packages
 rm -rf "$BUNDLE_DIR/command-t"
