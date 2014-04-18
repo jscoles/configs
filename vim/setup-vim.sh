@@ -1,6 +1,6 @@
 #!/bin/bash
 HOME_DIR=`readlink -f ~`
-CONFIG_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+CONFIG_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 echo "config dir is '$CONFIG_DIR'"
 cd
 ln -fs $CONFIG_DIR/dotfiles/.vimrc .vimrc
@@ -23,5 +23,5 @@ while read reponame; do
   else
     cd $PACKAGE_DIR && git pull
   fi
-done < $CONFIG_DIR/vim-bundles.txt
+done < $CONFIG_DIR/vim/vim-bundles.txt
 
