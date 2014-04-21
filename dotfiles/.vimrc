@@ -2,7 +2,6 @@ call pathogen#infect()
 Helptags
 set nocompatible
 set noswapfile
-syntax on
 set incsearch
 set ignorecase
 set smartcase
@@ -42,13 +41,15 @@ if has("mouse")
   set mouse=a
 endif
 
+let &t_Co=256
+syntax enable
 set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
 "let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
-let &t_Co=256
+call togglebg#map("<F4>")
 
 let g:ctrlp_map = '<Leader>t'
 
