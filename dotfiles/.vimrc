@@ -50,6 +50,7 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
 call togglebg#map("<F4>")
+set t_ut=
 
 let g:ctrlp_map = '<Leader>t'
 
