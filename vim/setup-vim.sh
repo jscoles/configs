@@ -1,12 +1,11 @@
 #!/bin/bash
-HOME_DIR=`readlink -f ~`
 CONFIG_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 echo "config dir is '$CONFIG_DIR'"
 cd
 ln -fs $CONFIG_DIR/dotfiles/.vimrc .vimrc
 cp -r $CONFIG_DIR/dotfiles/.vim .
 
-BUNDLE_DIR="$HOME_DIR/.vim/bundle"
+BUNDLE_DIR="$HOME/.vim/bundle"
 mkdir -p $BUNDLE_DIR
 
 #clear old packages

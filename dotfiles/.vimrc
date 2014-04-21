@@ -48,6 +48,7 @@ let g:solarized_termcolors=256
 "let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
+let &t_Co=256
 
 let g:ctrlp_map = '<Leader>t'
 
@@ -84,4 +85,3 @@ let MRU_EXCLUDE_FILES = '^git-.*)'
 
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
-
