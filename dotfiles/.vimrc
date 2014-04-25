@@ -56,7 +56,7 @@ let g:ctrlp_map = '<Leader>t'
 
 " fugitive.vim shortcuts
 nnoremap g* :Ggrep <cword><cr><cr>:copen<cr>
-nnoremap gr :Ggrep
+nnoremap gr :Ggrep<space>
 
 " MRU.vim shortcuts
 nnoremap <Leader>m :MRU<cr>
