@@ -10,3 +10,4 @@ https://github.com/scrooloose/syntastic.git
 https://github.com/cakebaker/scss-syntax.vim.git
 https://github.com/kien/ctrlp.vim.git
 https://github.com/nacitar/terminalkeys.vim
+https://github.com/scrooloose/nerdcommenter.git
