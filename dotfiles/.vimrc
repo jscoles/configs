@@ -33,6 +33,11 @@ noremap <silent> <C-S>  :update<CR>
 vnoremap <silent> <C-S> <C-C>:update<CR>
 inoremap <silent> <C-S> <C-O>:update<CR>
 
+nnoremap gj <C-w>j
+nnoremap gk <C-w>k
+nnoremap gh <C-w>h
+nnoremap gl <C-w>l
+
 set pastetoggle=<C-P>
 
 set exrc " enable per-directory .vimrc files
@@ -53,6 +58,9 @@ call togglebg#map("<F4>")
 set t_ut=
 
 let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
 
 " fugitive.vim shortcuts
 nnoremap g* :Ggrep <cword><cr><cr>:copen<cr>
