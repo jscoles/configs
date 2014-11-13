@@ -57,6 +57,8 @@ colorscheme solarized
 call togglebg#map("<F4>")
 set t_ut=
 
+nnoremap <F2> :set nonumber!<CR>
+
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_max_files=0
