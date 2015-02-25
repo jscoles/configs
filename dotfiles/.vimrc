@@ -58,11 +58,19 @@ call togglebg#map("<F4>")
 set t_ut=
 
 nnoremap <F2> :set nonumber!<CR>
+nnoremap <F3> :set hls!<CR>
 
-let g:ctrlp_map = '<Leader>t'
-let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_map='<Leader>t'
+nnoremap <Leader>b :CtrlPBuffer<CR>
+let g:ctrlp_clear_cache_on_exit=0
 let g:ctrlp_max_files=0
+let g:ctrlp_lazy_update=0
 let g:ctrlp_max_depth=40
+let g:ctrlp_custom_ignore = {
+ \ 'dir': '\.git$\|\.svn$\|log\tmp$\|source_maps$\|jetty$\|node_modules$',
+ \ 'file': '\.exe$\|\.so$|\.min\.js$\|.pack.js$\|.min\.css$\|.cert$\|.patch'
+ \ }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 
 " fugitive.vim shortcuts
 nnoremap g* :Ggrep <cword><cr><cr>:copen<cr>
@@ -73,6 +81,8 @@ nnoremap <Leader>m :MRU<cr>
 
 " Other shortcuts
 nnoremap td :tabe %<cr>
+
+nnoremap <Leader>r :exe "!script/hydra.rb %:" . line(".")<cr>
 
 " shell shortcuts
 
@@ -97,3 +107,5 @@ let MRU_EXCLUDE_FILES = '^git-.*)'
 
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
+
+let g:javascript_enable_domhtmlcss=1
