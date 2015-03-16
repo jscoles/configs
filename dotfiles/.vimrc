@@ -102,6 +102,7 @@ vnoremap <silent> # :<C-U>
 " set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set laststatus=2
+let g:airline_powerline_fonts=1
 
 let MRU_EXCLUDE_FILES = '^git-.*)'
 
