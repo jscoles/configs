@@ -67,8 +67,8 @@ let g:ctrlp_max_files=0
 let g:ctrlp_lazy_update=0
 let g:ctrlp_max_depth=40
 let g:ctrlp_custom_ignore = {
- \ 'dir': '\.git$\|\.svn$\|log\tmp$\|source_maps$\|jetty$\|node_modules$',
- \ 'file': '\.exe$\|\.so$|\.min\.js$\|.pack.js$\|.min\.css$\|.cert$\|.patch'
+ \ 'dir': '\.git$\|\.svn$\|log\tmp$\|source_maps$\|jetty$\|node_modules$\|public/javascripts$',
+ \ 'file': '\.exe$\|\.so$|\.min\.js$\|.pack.js$\|.min\.css$\|.cert$\|.patch$\|.class$\|.png$\|.log$'
  \ }
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 
@@ -82,7 +82,7 @@ nnoremap <Leader>m :MRU<cr>
 " Other shortcuts
 nnoremap td :tabe %<cr>
 
-nnoremap <Leader>r :exe "!script/hydra.rb %:" . line(".")<cr>
+nnoremap <Leader>r :exe "!RAILS3=true bundle exec zeus test %:" . line(".") .  " -fs -d"<cr>
 
 " shell shortcuts
 
