@@ -82,7 +82,7 @@ nnoremap <Leader>m :MRU<cr>
 " Other shortcuts
 nnoremap td :tabe %<cr>
 
-nnoremap <Leader>r :exe "!RAILS3=true bundle exec zeus test %:" . line(".") .  " -fs -d"<cr>
+nnoremap <Leader>r :exe "!bundle exec zeus test %:" . line(".") .  " -fd -rdebugger"<cr>
 
 " shell shortcuts
 
