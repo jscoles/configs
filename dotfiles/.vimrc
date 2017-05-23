@@ -5,6 +5,7 @@ set noswapfile
 set incsearch
 set ignorecase
 set smartcase
+set noeb vb t_vb=
 
 set tabstop=2
 set shiftwidth=2
@@ -14,6 +15,9 @@ set backspace=indent,eol,start
 set timeoutlen=1000 ttimeoutlen=10
 filetype plugin on
 filetype indent on
+
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+au BufNewFile,BufRead *.jbuilder set ft=ruby
 
 runtime macros/matchit.vim
 
@@ -74,7 +78,7 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 
 " fugitive.vim shortcuts
 nnoremap g* :Ggrep <cword><cr><cr>:copen<cr>
-nnoremap gr :Ggrep<space>
+nnoremap ggr :Ggrep<space>
 
 " MRU.vim shortcuts
 nnoremap <Leader>m :MRU<cr>
@@ -82,7 +86,7 @@ nnoremap <Leader>m :MRU<cr>
 " Other shortcuts
 nnoremap td :tabe %<cr>
 
-nnoremap <Leader>r :exe "!bundle exec zeus test %:" . line(".") .  " -fd -rdebugger"<cr>
+nnoremap <Leader>r :exe "!clear && script/zeus test " . expand("%p") .  ":" . line(".") . " -fd"<cr>
 
 " shell shortcuts
 
@@ -106,7 +110,12 @@ let g:airline_powerline_fonts=1
 
 let MRU_EXCLUDE_FILES = '^git-.*)'
 
+"let g:syntastic_debug=1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec='/home/jscoles/co/manage/node_modules/eslint/bin/eslint.js'
 
 let g:javascript_enable_domhtmlcss=1
+
+
