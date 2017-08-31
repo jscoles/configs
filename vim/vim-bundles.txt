@@ -9,6 +9,6 @@ https://github.com/kien/ctrlp.vim.git
 https://github.com/nacitar/terminalkeys.vim
 https://github.com/scrooloose/nerdcommenter.git
 https://github.com/mkitt/tabline.vim.git
-https://github.com/pangloss/vim-javascript.git
+https://github.com/mxw/vim-jsx.git
 https://github.com/bling/vim-airline.git
 https://github.com/derekwyatt/vim-scala.git
