@@ -11,6 +11,7 @@ Plug 'https://github.com/tpope/vim-unimpaired.git'
 Plug 'vim-airline/vim-airline'
 Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -22,15 +23,12 @@ set background=dark
 let g:airline_powerline_fonts=1
 
 autocmd! BufWritePost,BufEnter * Neomake
-let g:neomake_verbose=3
+let g:neomake_verbose=0
+"let g:neomake_logfile = '/home/jscoles/neomake.log'
 let g:neomake_open_list = 2
 
-" let g:neomake_eslint_maker = {
-"	\ 'exe': './node_modules/.bin/eslint',
-"	\ 'args': ['--rulesdir ~/co/manage/js_infra/eslint_rules/'],
-"	\ 'errorformat': '%f:%l:%c: %m',
-"	\ }
 let g:neomake_javascript_eslint_exe = './node_modules/.bin/eslint'
+let g:neomake_javascript_eslint_args = '-f compact --rulesdir ~/co/manage/js_infra/eslint_rules/'
 let g:neomake_javascript_enabled_makers = ['eslint']
 
 set nu
